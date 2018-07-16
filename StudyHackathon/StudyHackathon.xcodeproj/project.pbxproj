@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		8F5216CD20FD448800DC89A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F5216CC20FD448700DC89A4 /* GoogleService-Info.plist */; };
+		8F8E182020FD48A900B61D2F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8E181F20FD48A900B61D2F /* Constants.swift */; };
+		8F8E182220FD48E900B61D2F /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8E182120FD48E900B61D2F /* CreateUsernameViewController.swift */; };
+		8F8E182420FD48F300B61D2F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8E182320FD48F300B61D2F /* LoginViewController.swift */; };
+		8F8E182620FD490000B61D2F /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8E182520FD490000B61D2F /* Storyboard+Utility.swift */; };
+		8F8E182820FD490900B61D2F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8E182720FD490900B61D2F /* User.swift */; };
+		8F8E182A20FD491200B61D2F /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8E182920FD491200B61D2F /* UserService.swift */; };
+		8F8E182C20FD491F00B61D2F /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F8E182B20FD491F00B61D2F /* Login.storyboard */; };
 		8F8F4EE720FD4174009CAC10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8F4EE620FD4174009CAC10 /* AppDelegate.swift */; };
 		8F8F4EE920FD4174009CAC10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8F4EE820FD4174009CAC10 /* ViewController.swift */; };
 		8F8F4EEC20FD4174009CAC10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F8F4EEA20FD4174009CAC10 /* Main.storyboard */; };
@@ -20,6 +27,13 @@
 		0CEB40C39E3C13A14BCF9638 /* Pods-StudyHackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyHackathon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StudyHackathon/Pods-StudyHackathon.debug.xcconfig"; sourceTree = "<group>"; };
 		2824D3DDD98570845F3C47F1 /* Pods_StudyHackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudyHackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F5216CC20FD448700DC89A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8F8E181F20FD48A900B61D2F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8F8E182120FD48E900B61D2F /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
+		8F8E182320FD48F300B61D2F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8F8E182520FD490000B61D2F /* Storyboard+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
+		8F8E182720FD490900B61D2F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8F8E182920FD491200B61D2F /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		8F8E182B20FD491F00B61D2F /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		8F8F4EE320FD4174009CAC10 /* StudyHackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyHackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F8F4EE620FD4174009CAC10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F8F4EE820FD4174009CAC10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +64,60 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8F5216CE20FD466D00DC89A4 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				8F8F4EF220FD4174009CAC10 /* Info.plist */,
+				8F5216CC20FD448700DC89A4 /* GoogleService-Info.plist */,
+				8F8E181F20FD48A900B61D2F /* Constants.swift */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		8F5216CF20FD46EE00DC89A4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8F8F4EEA20FD4174009CAC10 /* Main.storyboard */,
+				8F8E182B20FD491F00B61D2F /* Login.storyboard */,
+				8F8F4EEF20FD4174009CAC10 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8F5216D020FD471400DC89A4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8F8F4EE820FD4174009CAC10 /* ViewController.swift */,
+				8F8E182120FD48E900B61D2F /* CreateUsernameViewController.swift */,
+				8F8E182320FD48F300B61D2F /* LoginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8F5216D120FD472F00DC89A4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8F8E182520FD490000B61D2F /* Storyboard+Utility.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8F5216D220FD473E00DC89A4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8F8E182720FD490900B61D2F /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8F5216D320FD474900DC89A4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8F8E182920FD491200B61D2F /* UserService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		8F8F4EDA20FD4174009CAC10 = {
 			isa = PBXGroup;
 			children = (
@@ -71,13 +139,14 @@
 		8F8F4EE520FD4174009CAC10 /* StudyHackathon */ = {
 			isa = PBXGroup;
 			children = (
+				8F5216D320FD474900DC89A4 /* Services */,
+				8F5216D220FD473E00DC89A4 /* Models */,
+				8F5216D120FD472F00DC89A4 /* Extensions */,
+				8F5216D020FD471400DC89A4 /* Controllers */,
+				8F5216CF20FD46EE00DC89A4 /* Storyboards */,
+				8F5216CE20FD466D00DC89A4 /* Supporting */,
 				8F8F4EE620FD4174009CAC10 /* AppDelegate.swift */,
-				8F8F4EE820FD4174009CAC10 /* ViewController.swift */,
-				8F8F4EEA20FD4174009CAC10 /* Main.storyboard */,
 				8F8F4EED20FD4174009CAC10 /* Assets.xcassets */,
-				8F8F4EEF20FD4174009CAC10 /* LaunchScreen.storyboard */,
-				8F8F4EF220FD4174009CAC10 /* Info.plist */,
-				8F5216CC20FD448700DC89A4 /* GoogleService-Info.plist */,
 			);
 			path = StudyHackathon;
 			sourceTree = "<group>";
@@ -155,6 +224,7 @@
 				8F8F4EF120FD4174009CAC10 /* LaunchScreen.storyboard in Resources */,
 				8F5216CD20FD448800DC89A4 /* GoogleService-Info.plist in Resources */,
 				8F8F4EEE20FD4174009CAC10 /* Assets.xcassets in Resources */,
+				8F8E182C20FD491F00B61D2F /* Login.storyboard in Resources */,
 				8F8F4EEC20FD4174009CAC10 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,8 +299,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F8E182220FD48E900B61D2F /* CreateUsernameViewController.swift in Sources */,
 				8F8F4EE920FD4174009CAC10 /* ViewController.swift in Sources */,
 				8F8F4EE720FD4174009CAC10 /* AppDelegate.swift in Sources */,
+				8F8E182620FD490000B61D2F /* Storyboard+Utility.swift in Sources */,
+				8F8E182A20FD491200B61D2F /* UserService.swift in Sources */,
+				8F8E182420FD48F300B61D2F /* LoginViewController.swift in Sources */,
+				8F8E182020FD48A900B61D2F /* Constants.swift in Sources */,
+				8F8E182820FD490900B61D2F /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,7 +452,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = StudyHackathon/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/StudyHackathon/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -394,7 +470,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = StudyHackathon/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/StudyHackathon/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
