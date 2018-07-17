@@ -16,10 +16,12 @@
 		8F8E182A20FD491200B61D2F /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8E182920FD491200B61D2F /* UserService.swift */; };
 		8F8E182C20FD491F00B61D2F /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F8E182B20FD491F00B61D2F /* Login.storyboard */; };
 		8F8F4EE720FD4174009CAC10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8F4EE620FD4174009CAC10 /* AppDelegate.swift */; };
-		8F8F4EE920FD4174009CAC10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8F4EE820FD4174009CAC10 /* ViewController.swift */; };
 		8F8F4EEC20FD4174009CAC10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F8F4EEA20FD4174009CAC10 /* Main.storyboard */; };
 		8F8F4EEE20FD4174009CAC10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F8F4EED20FD4174009CAC10 /* Assets.xcassets */; };
 		8F8F4EF120FD4174009CAC10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F8F4EEF20FD4174009CAC10 /* LaunchScreen.storyboard */; };
+		8FB6F3C620FE61D300FD1031 /* SubjectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB6F3C520FE61D300FD1031 /* SubjectTableViewController.swift */; };
+		8FB6F3C820FE654100FD1031 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB6F3C720FE654100FD1031 /* Subject.swift */; };
+		8FB6F3CB20FE67D300FD1031 /* SubjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB6F3CA20FE67D300FD1031 /* SubjectTableViewCell.swift */; };
 		DD8EBACBFFFF34FA053B389E /* Pods_StudyHackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2824D3DDD98570845F3C47F1 /* Pods_StudyHackathon.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,11 +38,13 @@
 		8F8E182B20FD491F00B61D2F /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		8F8F4EE320FD4174009CAC10 /* StudyHackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyHackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F8F4EE620FD4174009CAC10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8F8F4EE820FD4174009CAC10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8F8F4EEB20FD4174009CAC10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8F8F4EED20FD4174009CAC10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F8F4EF020FD4174009CAC10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F8F4EF220FD4174009CAC10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FB6F3C520FE61D300FD1031 /* SubjectTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectTableViewController.swift; sourceTree = "<group>"; };
+		8FB6F3C720FE654100FD1031 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		8FB6F3CA20FE67D300FD1031 /* SubjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectTableViewCell.swift; sourceTree = "<group>"; };
 		95AE4B38D9C2B8FEEDBE2F7E /* Pods-StudyHackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyHackathon.release.xcconfig"; path = "Pods/Target Support Files/Pods-StudyHackathon/Pods-StudyHackathon.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,9 +91,9 @@
 		8F5216D020FD471400DC89A4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8F8F4EE820FD4174009CAC10 /* ViewController.swift */,
 				8F8E182120FD48E900B61D2F /* CreateUsernameViewController.swift */,
 				8F8E182320FD48F300B61D2F /* LoginViewController.swift */,
+				8FB6F3C520FE61D300FD1031 /* SubjectTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -106,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				8F8E182720FD490900B61D2F /* User.swift */,
+				8FB6F3C720FE654100FD1031 /* Subject.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -139,6 +144,7 @@
 		8F8F4EE520FD4174009CAC10 /* StudyHackathon */ = {
 			isa = PBXGroup;
 			children = (
+				8FB6F3C920FE67C400FD1031 /* Views */,
 				8F5216D320FD474900DC89A4 /* Services */,
 				8F5216D220FD473E00DC89A4 /* Models */,
 				8F5216D120FD472F00DC89A4 /* Extensions */,
@@ -149,6 +155,14 @@
 				8F8F4EED20FD4174009CAC10 /* Assets.xcassets */,
 			);
 			path = StudyHackathon;
+			sourceTree = "<group>";
+		};
+		8FB6F3C920FE67C400FD1031 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8FB6F3CA20FE67D300FD1031 /* SubjectTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E2EA7983EF98DC82A1C5DF3F /* Pods */ = {
@@ -299,13 +313,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FB6F3CB20FE67D300FD1031 /* SubjectTableViewCell.swift in Sources */,
 				8F8E182220FD48E900B61D2F /* CreateUsernameViewController.swift in Sources */,
-				8F8F4EE920FD4174009CAC10 /* ViewController.swift in Sources */,
 				8F8F4EE720FD4174009CAC10 /* AppDelegate.swift in Sources */,
 				8F8E182620FD490000B61D2F /* Storyboard+Utility.swift in Sources */,
 				8F8E182A20FD491200B61D2F /* UserService.swift in Sources */,
+				8FB6F3C620FE61D300FD1031 /* SubjectTableViewController.swift in Sources */,
 				8F8E182420FD48F300B61D2F /* LoginViewController.swift in Sources */,
 				8F8E182020FD48A900B61D2F /* Constants.swift in Sources */,
+				8FB6F3C820FE654100FD1031 /* Subject.swift in Sources */,
 				8F8E182820FD490900B61D2F /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
