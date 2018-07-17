@@ -28,14 +28,6 @@ class LoginViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-    /*
-    // MARK: - Navigation
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        <#code#>
-    }
-    */
     
     // MARK: - IBActions
     
@@ -62,7 +54,7 @@ extension LoginViewController: FUIAuthDelegate {
         
         UserService.show(forUID: user.uid) { (user) in
             if let user = user {
-                User.setCurrent(user)
+                User.setCurrent(user, writeToUserDefaults: true)
                 
                 let initialViewController = UIStoryboard.initialViewController(for: .main)
                 self.view.window?.rootViewController = initialViewController
