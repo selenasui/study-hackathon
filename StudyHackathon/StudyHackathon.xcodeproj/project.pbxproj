@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8F5216CD20FD448800DC89A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F5216CC20FD448700DC89A4 /* GoogleService-Info.plist */; };
+		8F8281F120FE6E48008B3988 /* ChannelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8281F020FE6E48008B3988 /* ChannelTableViewController.swift */; };
 		8F8E182020FD48A900B61D2F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8E181F20FD48A900B61D2F /* Constants.swift */; };
 		8F8E182220FD48E900B61D2F /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8E182120FD48E900B61D2F /* CreateUsernameViewController.swift */; };
 		8F8E182420FD48F300B61D2F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8E182320FD48F300B61D2F /* LoginViewController.swift */; };
@@ -29,6 +30,7 @@
 		0CEB40C39E3C13A14BCF9638 /* Pods-StudyHackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyHackathon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StudyHackathon/Pods-StudyHackathon.debug.xcconfig"; sourceTree = "<group>"; };
 		2824D3DDD98570845F3C47F1 /* Pods_StudyHackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudyHackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F5216CC20FD448700DC89A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8F8281F020FE6E48008B3988 /* ChannelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTableViewController.swift; sourceTree = "<group>"; };
 		8F8E181F20FD48A900B61D2F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8F8E182120FD48E900B61D2F /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
 		8F8E182320FD48F300B61D2F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				8F8E182120FD48E900B61D2F /* CreateUsernameViewController.swift */,
 				8F8E182320FD48F300B61D2F /* LoginViewController.swift */,
 				8FB6F3C520FE61D300FD1031 /* SubjectTableViewController.swift */,
+				8F8281F020FE6E48008B3988 /* ChannelTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				8F8E182620FD490000B61D2F /* Storyboard+Utility.swift in Sources */,
 				8F8E182A20FD491200B61D2F /* UserService.swift in Sources */,
 				8FB6F3C620FE61D300FD1031 /* SubjectTableViewController.swift in Sources */,
+				8F8281F120FE6E48008B3988 /* ChannelTableViewController.swift in Sources */,
 				8F8E182420FD48F300B61D2F /* LoginViewController.swift in Sources */,
 				8F8E182020FD48A900B61D2F /* Constants.swift in Sources */,
 				8FB6F3C820FE654100FD1031 /* Subject.swift in Sources */,
