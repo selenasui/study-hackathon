@@ -41,7 +41,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="subjectNameLabel" destination="xYV-57-0XK" id="urN-cR-54b"/>
-                                    <segue destination="jT4-7a-ZyB" kind="show" identifier="displayChannel" id="uwQ-o1-l45"/>
+                                    <segue destination="65a-qo-kIG" kind="show" identifier="displayChannel" id="uwQ-o1-l45"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -55,6 +55,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="adK-hC-yXp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-185" y="-170"/>
+        </scene>
+        <!--Study Groups-->
+        <scene sceneID="W2A-L4-PHh">
+            <objects>
+                <tableViewController title="Study Groups" id="65a-qo-kIG" customClass="ChannelTableViewController" customModule="StudyHackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sKy-r4-qqu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="isH-AI-k8b">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="isH-AI-k8b" id="PBt-Ui-TN7">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="65a-qo-kIG" id="oF8-1l-4NZ"/>
+                            <outlet property="delegate" destination="65a-qo-kIG" id="VPK-Nj-Tvw"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Study Groups" id="9h6-Mt-7lc">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="NwK-CO-5zt"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RSn-ew-bC3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="778" y="-170"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="stJ-as-fNh">
@@ -71,14 +102,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="feX-3l-ISk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1137" y="-170"/>
-        </scene>
-        <!--Channel-->
-        <scene sceneID="kpV-nZ-9gw">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Channel" id="jT4-7a-ZyB" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mg8-rx-c6V" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="778" y="-170"/>
         </scene>
     </scenes>
 </document>
