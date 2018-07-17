@@ -11,11 +11,15 @@ import FirebaseDatabase
 
 class SubjectTableViewController: UITableViewController {
     
-    var subjects = [Subject]() {
-        didSet {
-            tableView.reloadData()
-        }
-    }
+//    var subjects = [Subject]() {
+//        didSet {
+//            tableView.reloadData()
+//        }
+//    }
+    
+    var subjects = [Subject(sid: "a", subjectName: "Biology"),
+                    Subject(sid: "b", subjectName: "Chemistry"),
+                    Subject(sid: "c", subjectName: "Physics")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
