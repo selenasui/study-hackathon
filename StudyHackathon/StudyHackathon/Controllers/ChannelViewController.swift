@@ -25,6 +25,10 @@ class ChannelViewController: UIViewController {
         self.tableView.reloadData()
     }
     
+    @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
+        // notes = CoreDataHelper.retrieveSubjects()
+    }
+    
 }
 
 extension ChannelViewController: UITableViewDataSource {

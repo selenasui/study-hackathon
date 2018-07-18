@@ -56,8 +56,4 @@ class SubjectTableViewController: UITableViewController {
             print("Unexpected segue identifier")
         }
     }
-    
-    @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
-        // notes = CoreDataHelper.retrieveSubjects()
-    }
 }
