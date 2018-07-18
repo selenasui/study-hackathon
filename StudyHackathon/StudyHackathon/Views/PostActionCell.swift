@@ -1,5 +1,5 @@
 //
-//  PostHeaderCell.swift
+//  PostActionCell.swift
 //  StudyHackathon
 //
 //  Created by Binjia Chen on 7/17/18.
@@ -8,12 +8,11 @@
 
 import UIKit
 
-class PostHeaderCell: UITableViewCell {
+class PostActionCell: UITableViewCell {
     
-    static let height: CGFloat = 54
+    static let height: CGFloat = 46
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
 }

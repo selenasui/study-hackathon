@@ -51,13 +51,31 @@ extension ChannelViewController: UITableViewDataSource {
 //
 //            return cell
 //
-//        case 2:
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "postActionCell") as! PostActionCell
-//
-//            return cell
+        case 2:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PostActionCell") as! PostActionCell
+            // configure cell
+            
+            return cell
 
         default:
             fatalError("Error: unexpected indexPath")
+        }
+    }
+}
+
+extension ChannelViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.row {
+        case 0:
+            return PostHeaderCell.height
+            
+        //case 1:
+            // code for height of post description box
+            
+        case 2:
+            return PostActionCell.height
+        default:
+            fatalError()
         }
     }
 }

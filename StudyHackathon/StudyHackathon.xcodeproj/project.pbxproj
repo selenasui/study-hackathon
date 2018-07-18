@@ -10,6 +10,7 @@
 		75FA170420FE731600058CDC /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA170320FE731600058CDC /* PostViewController.swift */; };
 		8F42B3DD20FEDF35004D0A79 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F42B3DC20FEDF35004D0A79 /* Post.swift */; };
 		8F42B3DF20FEE18E004D0A79 /* PostHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F42B3DE20FEE18E004D0A79 /* PostHeaderCell.swift */; };
+		8F42B3E120FEEC9A004D0A79 /* PostActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F42B3E020FEEC9A004D0A79 /* PostActionCell.swift */; };
 		8F5216CD20FD448800DC89A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F5216CC20FD448700DC89A4 /* GoogleService-Info.plist */; };
 		8F58C3CB20FED8AD000BFE8D /* Post.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F58C3CA20FED8AD000BFE8D /* Post.storyboard */; };
 		8F58C3CD20FEDCC6000BFE8D /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F58C3CC20FEDCC6000BFE8D /* ChannelViewController.swift */; };
@@ -37,6 +38,7 @@
 		75FA170320FE731600058CDC /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		8F42B3DC20FEDF35004D0A79 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		8F42B3DE20FEE18E004D0A79 /* PostHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHeaderCell.swift; sourceTree = "<group>"; };
+		8F42B3E020FEEC9A004D0A79 /* PostActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostActionCell.swift; sourceTree = "<group>"; };
 		8F5216CC20FD448700DC89A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8F58C3CA20FED8AD000BFE8D /* Post.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Post.storyboard; sourceTree = "<group>"; };
 		8F58C3CC20FEDCC6000BFE8D /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			children = (
 				8FB6F3CA20FE67D300FD1031 /* SubjectTableViewCell.swift */,
 				8F42B3DE20FEE18E004D0A79 /* PostHeaderCell.swift */,
+				8F42B3E020FEEC9A004D0A79 /* PostActionCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				8F8E182420FD48F300B61D2F /* LoginViewController.swift in Sources */,
 				8F8E182020FD48A900B61D2F /* Constants.swift in Sources */,
 				8FB6F3C820FE654100FD1031 /* Subject.swift in Sources */,
+				8F42B3E120FEEC9A004D0A79 /* PostActionCell.swift in Sources */,
 				8F58C3CD20FEDCC6000BFE8D /* ChannelViewController.swift in Sources */,
 				8F8E182820FD490900B61D2F /* User.swift in Sources */,
 			);
