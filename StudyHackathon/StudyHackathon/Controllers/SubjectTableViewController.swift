@@ -49,7 +49,7 @@ class SubjectTableViewController: UITableViewController {
             guard let indexPath = tableView.indexPathForSelectedRow else { return }
             
             let subject = subjects[indexPath.row]
-            let destination = segue.destination as! ChannelTableViewController
+            let destination = segue.destination as! ChannelViewController
             destination.subject = subject
         
         default:

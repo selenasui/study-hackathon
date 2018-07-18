@@ -1,5 +1,5 @@
 //
-//  ChannelTableViewController.swift
+//  PostHeaderCell.swift
 //  StudyHackathon
 //
 //  Created by Binjia Chen on 7/17/18.
@@ -7,9 +7,7 @@
 //
 
 import UIKit
-import FirebaseDatabase
 
-class ChannelTableViewController: UITableViewController {
+class PostHeaderCell: UITableViewCell {
     
-    var subject: Subject?
 }

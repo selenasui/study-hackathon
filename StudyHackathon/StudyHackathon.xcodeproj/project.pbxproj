@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		75FA170420FE731600058CDC /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA170320FE731600058CDC /* PostViewController.swift */; };
+		8F42B3DD20FEDF35004D0A79 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F42B3DC20FEDF35004D0A79 /* Post.swift */; };
+		8F42B3DF20FEE18E004D0A79 /* PostHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F42B3DE20FEE18E004D0A79 /* PostHeaderCell.swift */; };
 		8F5216CD20FD448800DC89A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F5216CC20FD448700DC89A4 /* GoogleService-Info.plist */; };
 		8F58C3CB20FED8AD000BFE8D /* Post.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F58C3CA20FED8AD000BFE8D /* Post.storyboard */; };
-		8F8281F120FE6E48008B3988 /* ChannelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8281F020FE6E48008B3988 /* ChannelTableViewController.swift */; };
+		8F58C3CD20FEDCC6000BFE8D /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F58C3CC20FEDCC6000BFE8D /* ChannelViewController.swift */; };
 		8F8281F420FEB5EB008B3988 /* Channel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F8281F320FEB5EB008B3988 /* Channel.storyboard */; };
 		8F8E182020FD48A900B61D2F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8E181F20FD48A900B61D2F /* Constants.swift */; };
 		8F8E182220FD48E900B61D2F /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8E182120FD48E900B61D2F /* CreateUsernameViewController.swift */; };
@@ -33,9 +35,11 @@
 		0CEB40C39E3C13A14BCF9638 /* Pods-StudyHackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyHackathon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StudyHackathon/Pods-StudyHackathon.debug.xcconfig"; sourceTree = "<group>"; };
 		2824D3DDD98570845F3C47F1 /* Pods_StudyHackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudyHackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75FA170320FE731600058CDC /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		8F42B3DC20FEDF35004D0A79 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		8F42B3DE20FEE18E004D0A79 /* PostHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHeaderCell.swift; sourceTree = "<group>"; };
 		8F5216CC20FD448700DC89A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8F58C3CA20FED8AD000BFE8D /* Post.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Post.storyboard; sourceTree = "<group>"; };
-		8F8281F020FE6E48008B3988 /* ChannelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTableViewController.swift; sourceTree = "<group>"; };
+		8F58C3CC20FEDCC6000BFE8D /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		8F8281F320FEB5EB008B3988 /* Channel.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Channel.storyboard; sourceTree = "<group>"; };
 		8F8E181F20FD48A900B61D2F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8F8E182120FD48E900B61D2F /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
@@ -105,7 +109,7 @@
 				75FA170320FE731600058CDC /* PostViewController.swift */,
 				8F8E182320FD48F300B61D2F /* LoginViewController.swift */,
 				8FB6F3C520FE61D300FD1031 /* SubjectTableViewController.swift */,
-				8F8281F020FE6E48008B3988 /* ChannelTableViewController.swift */,
+				8F58C3CC20FEDCC6000BFE8D /* ChannelViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -123,6 +127,7 @@
 			children = (
 				8F8E182720FD490900B61D2F /* User.swift */,
 				8FB6F3C720FE654100FD1031 /* Subject.swift */,
+				8F42B3DC20FEDF35004D0A79 /* Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				8FB6F3CA20FE67D300FD1031 /* SubjectTableViewCell.swift */,
+				8F42B3DE20FEE18E004D0A79 /* PostHeaderCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -327,17 +333,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F42B3DF20FEE18E004D0A79 /* PostHeaderCell.swift in Sources */,
 				8FB6F3CB20FE67D300FD1031 /* SubjectTableViewCell.swift in Sources */,
 				75FA170420FE731600058CDC /* PostViewController.swift in Sources */,
 				8F8E182220FD48E900B61D2F /* CreateUsernameViewController.swift in Sources */,
 				8F8F4EE720FD4174009CAC10 /* AppDelegate.swift in Sources */,
+				8F42B3DD20FEDF35004D0A79 /* Post.swift in Sources */,
 				8F8E182620FD490000B61D2F /* Storyboard+Utility.swift in Sources */,
 				8F8E182A20FD491200B61D2F /* UserService.swift in Sources */,
 				8FB6F3C620FE61D300FD1031 /* SubjectTableViewController.swift in Sources */,
-				8F8281F120FE6E48008B3988 /* ChannelTableViewController.swift in Sources */,
 				8F8E182420FD48F300B61D2F /* LoginViewController.swift in Sources */,
 				8F8E182020FD48A900B61D2F /* Constants.swift in Sources */,
 				8FB6F3C820FE654100FD1031 /* Subject.swift in Sources */,
+				8F58C3CD20FEDCC6000BFE8D /* ChannelViewController.swift in Sources */,
 				8F8E182820FD490900B61D2F /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
