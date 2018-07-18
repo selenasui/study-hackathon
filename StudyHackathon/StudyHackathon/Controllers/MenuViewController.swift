@@ -12,7 +12,7 @@ protocol SlideMenuDelegate {
     func slideMenuItemSelectedAtIndex(_ index : Int32)
 }
 
-class MenuViewController: UIViewController {
+class MenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var btnCloseMenuOverlay: UIButton!
     
@@ -55,6 +55,20 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func btnHomeTapped(_ sender: Any) {
+        let mainStoreboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let DVC = mainStoreboard.instantiateViewController(withIdentifier: "SubjectTableViewController") as! SubjectTableViewController
+        self.navigationController?.pushViewController(DVC, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell") as! MenuTableViewCell
+        
+        return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let mainStoreboard : UIStoryboard = UIStoryboard(name: "Channel", bundle: nil)
         let DVC = mainStoreboard.instantiateViewController(withIdentifier: "ChannelViewController") as! ChannelViewController
         self.navigationController?.pushViewController(DVC, animated: true)

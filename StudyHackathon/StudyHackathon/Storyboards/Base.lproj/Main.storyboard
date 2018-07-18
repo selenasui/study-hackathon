@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -41,12 +42,49 @@
                                             <action selector="btnHomeTapped:" destination="zgq-TU-ov4" eventType="touchUpInside" id="jzv-gE-BWP"/>
                                         </connections>
                                     </button>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LNd-bg-GYc">
+                                        <rect key="frame" x="8" y="73" width="282" height="566"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuTableViewCell" id="1uC-Rd-a8V" customClass="MenuTableViewCell" customModule="StudyHackathon" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="282" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1uC-Rd-a8V" id="L0v-UZ-8Ny">
+                                                    <rect key="frame" x="0.0" y="0.0" width="282" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ChannelNameHere" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijx-eg-70T">
+                                                            <rect key="frame" x="15" y="11" width="252" height="22"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="ijx-eg-70T" firstAttribute="bottom" secondItem="L0v-UZ-8Ny" secondAttribute="bottomMargin" id="0UT-4k-bBq"/>
+                                                        <constraint firstItem="ijx-eg-70T" firstAttribute="leading" secondItem="L0v-UZ-8Ny" secondAttribute="leadingMargin" id="2xt-Te-83U"/>
+                                                        <constraint firstItem="ijx-eg-70T" firstAttribute="trailing" secondItem="L0v-UZ-8Ny" secondAttribute="trailingMargin" id="Os3-Rv-UiM"/>
+                                                        <constraint firstItem="ijx-eg-70T" firstAttribute="top" secondItem="L0v-UZ-8Ny" secondAttribute="topMargin" id="US8-0b-rRs"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="zgq-TU-ov4" id="8Za-EO-ZvZ"/>
+                                            <outlet property="delegate" destination="zgq-TU-ov4" id="epp-V0-IZD"/>
+                                        </connections>
+                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.41568627450000001" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="qk3-bw-xq7" firstAttribute="leading" secondItem="oHK-8i-L9o" secondAttribute="leading" constant="8" id="439-op-jrY"/>
+                                    <constraint firstAttribute="bottom" secondItem="LNd-bg-GYc" secondAttribute="bottom" constant="8" id="4rL-Yc-jxc"/>
+                                    <constraint firstAttribute="trailing" secondItem="LNd-bg-GYc" secondAttribute="trailing" constant="8" id="CHi-30-9uW"/>
                                     <constraint firstAttribute="trailing" secondItem="qk3-bw-xq7" secondAttribute="trailing" constant="8" id="PaJ-nr-GkD"/>
                                     <constraint firstItem="qk3-bw-xq7" firstAttribute="top" secondItem="oHK-8i-L9o" secondAttribute="top" constant="8" id="fTI-m3-EAc"/>
+                                    <constraint firstItem="LNd-bg-GYc" firstAttribute="leading" secondItem="oHK-8i-L9o" secondAttribute="leading" constant="8" id="ypq-gW-cgL"/>
+                                    <constraint firstItem="LNd-bg-GYc" firstAttribute="top" secondItem="qk3-bw-xq7" secondAttribute="bottom" constant="20" id="zeP-rq-7RC"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -71,25 +109,10 @@
             </objects>
             <point key="canvasLocation" x="-186.40000000000001" y="-846.02698650674665"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="U1c-Js-sdC">
-            <objects>
-                <viewController id="Hqy-ks-Nxz" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="sUj-Yy-7o4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="0O0-Qz-goR"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cw6-4G-F1a" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="703" y="-846"/>
-        </scene>
         <!--Subjects-->
         <scene sceneID="l81-wL-h4W">
             <objects>
-                <tableViewController title="Subjects" id="Rwx-TN-E0F" customClass="SubjectTableViewController" customModule="StudyHackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SubjectTableViewController" title="Subjects" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Rwx-TN-E0F" customClass="SubjectTableViewController" customModule="StudyHackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zML-ZR-kXD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

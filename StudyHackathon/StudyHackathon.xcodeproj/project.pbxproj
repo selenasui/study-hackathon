@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		758FC76920FFD68200CF7ADA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758FC76820FFD68200CF7ADA /* MenuViewController.swift */; };
 		758FC76B20FFDA2C00CF7ADA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758FC76A20FFDA2C00CF7ADA /* BaseViewController.swift */; };
+		759E874620FFE37700FF8FDE /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759E874520FFE37700FF8FDE /* MenuTableViewCell.swift */; };
 		75FA170420FE731600058CDC /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA170320FE731600058CDC /* PostViewController.swift */; };
 		8F42B3DD20FEDF35004D0A79 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F42B3DC20FEDF35004D0A79 /* Post.swift */; };
 		8F42B3DF20FEE18E004D0A79 /* PostHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F42B3DE20FEE18E004D0A79 /* PostHeaderCell.swift */; };
@@ -39,6 +40,7 @@
 		2824D3DDD98570845F3C47F1 /* Pods_StudyHackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudyHackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		758FC76820FFD68200CF7ADA /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		758FC76A20FFDA2C00CF7ADA /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		759E874520FFE37700FF8FDE /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		75FA170320FE731600058CDC /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		8F42B3DC20FEDF35004D0A79 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		8F42B3DE20FEE18E004D0A79 /* PostHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHeaderCell.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				8F58C3CC20FEDCC6000BFE8D /* ChannelViewController.swift */,
 				758FC76820FFD68200CF7ADA /* MenuViewController.swift */,
 				758FC76A20FFDA2C00CF7ADA /* BaseViewController.swift */,
+				759E874520FFE37700FF8FDE /* MenuTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				8F8E182420FD48F300B61D2F /* LoginViewController.swift in Sources */,
 				8F8E182020FD48A900B61D2F /* Constants.swift in Sources */,
 				8FB6F3C820FE654100FD1031 /* Subject.swift in Sources */,
+				759E874620FFE37700FF8FDE /* MenuTableViewCell.swift in Sources */,
 				8F42B3E120FEEC9A004D0A79 /* PostActionCell.swift in Sources */,
 				8F58C3CD20FEDCC6000BFE8D /* ChannelViewController.swift in Sources */,
 				8F8E182820FD490900B61D2F /* User.swift in Sources */,
