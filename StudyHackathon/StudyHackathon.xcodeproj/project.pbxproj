@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		758FC76920FFD68200CF7ADA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758FC76820FFD68200CF7ADA /* MenuViewController.swift */; };
+		758FC76B20FFDA2C00CF7ADA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758FC76A20FFDA2C00CF7ADA /* BaseViewController.swift */; };
 		75FA170420FE731600058CDC /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA170320FE731600058CDC /* PostViewController.swift */; };
 		8F42B3DD20FEDF35004D0A79 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F42B3DC20FEDF35004D0A79 /* Post.swift */; };
 		8F42B3DF20FEE18E004D0A79 /* PostHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F42B3DE20FEE18E004D0A79 /* PostHeaderCell.swift */; };
@@ -35,6 +37,8 @@
 /* Begin PBXFileReference section */
 		0CEB40C39E3C13A14BCF9638 /* Pods-StudyHackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyHackathon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StudyHackathon/Pods-StudyHackathon.debug.xcconfig"; sourceTree = "<group>"; };
 		2824D3DDD98570845F3C47F1 /* Pods_StudyHackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudyHackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		758FC76820FFD68200CF7ADA /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		758FC76A20FFDA2C00CF7ADA /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		75FA170320FE731600058CDC /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		8F42B3DC20FEDF35004D0A79 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		8F42B3DE20FEE18E004D0A79 /* PostHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHeaderCell.swift; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 				8F8E182320FD48F300B61D2F /* LoginViewController.swift */,
 				8FB6F3C520FE61D300FD1031 /* SubjectTableViewController.swift */,
 				8F58C3CC20FEDCC6000BFE8D /* ChannelViewController.swift */,
+				758FC76820FFD68200CF7ADA /* MenuViewController.swift */,
+				758FC76A20FFDA2C00CF7ADA /* BaseViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -343,6 +349,8 @@
 				8F8F4EE720FD4174009CAC10 /* AppDelegate.swift in Sources */,
 				8F42B3DD20FEDF35004D0A79 /* Post.swift in Sources */,
 				8F8E182620FD490000B61D2F /* Storyboard+Utility.swift in Sources */,
+				758FC76B20FFDA2C00CF7ADA /* BaseViewController.swift in Sources */,
+				758FC76920FFD68200CF7ADA /* MenuViewController.swift in Sources */,
 				8F8E182A20FD491200B61D2F /* UserService.swift in Sources */,
 				8FB6F3C620FE61D300FD1031 /* SubjectTableViewController.swift in Sources */,
 				8F8E182420FD48F300B61D2F /* LoginViewController.swift in Sources */,

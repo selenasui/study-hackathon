@@ -21,7 +21,7 @@
         <!--Study Groups-->
         <scene sceneID="rsO-Ad-tJb">
             <objects>
-                <viewController id="enh-BD-VJz" customClass="ChannelViewController" customModule="StudyHackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChannelViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="enh-BD-VJz" customClass="ChannelViewController" customModule="StudyHackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jmz-MK-uCx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

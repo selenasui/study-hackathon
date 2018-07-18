@@ -1,95 +1,32 @@
 //
-//  ChannelViewController.swift
-//  StudyHackathon
+//  BaseViewController.swift
+//  AKSwiftSlideMenu
 //
-//  Created by Binjia Chen on 7/17/18.
-//  Copyright © 2018 Make School. All rights reserved.
+//  Created by Ashish on 21/09/15.
+//  Copyright (c) 2015 Kode. All rights reserved.
 //
 
 import UIKit
-import FirebaseDatabase
 
-class ChannelViewController: UIViewController {
-    
-    var subject: Subject?
-    var posts = [Post]()
-    
-    @IBOutlet weak var channelNavigationItem: UINavigationItem!
-    @IBOutlet weak var tableView: UITableView!
+class BaseViewController: UIViewController, SlideMenuDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        addSlideMenuButton()
-        
-        channelNavigationItem.title = subject?.subjectName
-        
-        self.tableView.reloadData()
+        // Do any additional setup after loading the view.
     }
     
-    @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
-        // notes = CoreDataHelper.retrieveSubjects()
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
-}
-
-extension ChannelViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let post = posts[indexPath.section]
-
-        switch indexPath.row {
-        case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "PostHeaderCell") as! PostHeaderCell
-            //cell.usernameLabel.text = post.poster.username
-
-            return cell
-
-//        case 1:
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "postImageCell") as! PostImageCell
-//
-//            return cell
-//
-        case 2:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "PostActionCell") as! PostActionCell
-            // configure cell
-            
-            return cell
-
-        default:
-            fatalError("Error: unexpected indexPath")
-        }
-    }
-}
-
-extension ChannelViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.row {
-        case 0:
-            return PostHeaderCell.height
-            
-        //case 1:
-            // code for height of post description box
-            
-        case 2:
-            return PostActionCell.height
-        default:
-            fatalError()
-        }
-    }
-}
-
-extension ChannelViewController {
     func slideMenuItemSelectedAtIndex(_ index: Int32) {
         let topViewController : UIViewController = self.navigationController!.topViewController!
         print("View Controller is : \(topViewController) \n", terminator: "")
         switch(index){
         case 0:
             print("Home\n", terminator: "")
-            
+
             self.openViewControllerBasedOnIdentifier("Home")
             
             break
@@ -124,7 +61,7 @@ extension ChannelViewController {
         let customBarItem = UIBarButtonItem(customView: btnShowMenu)
         self.navigationItem.leftBarButtonItem = customBarItem;
     }
-    
+
     func defaultMenuImage() -> UIImage {
         var defaultMenuImage = UIImage()
         
@@ -143,7 +80,7 @@ extension ChannelViewController {
         defaultMenuImage = UIGraphicsGetImageFromCurrentImageContext()!
         
         UIGraphicsEndImageContext()
-        
+       
         return defaultMenuImage;
     }
     
@@ -163,8 +100,8 @@ extension ChannelViewController {
                 viewMenuBack.frame = frameMenu
                 viewMenuBack.layoutIfNeeded()
                 viewMenuBack.backgroundColor = UIColor.clear
-            }, completion: { (finished) -> Void in
-                viewMenuBack.removeFromSuperview()
+                }, completion: { (finished) -> Void in
+                    viewMenuBack.removeFromSuperview()
             })
             
             return
@@ -175,7 +112,7 @@ extension ChannelViewController {
         
         let menuVC : MenuViewController = self.storyboard!.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
         menuVC.btnMenu = sender
-        menuVC.delegate = self as? SlideMenuDelegate
+        menuVC.delegate = self
         self.view.addSubview(menuVC.view)
         self.addChildViewController(menuVC)
         menuVC.view.layoutIfNeeded()
@@ -186,8 +123,6 @@ extension ChannelViewController {
         UIView.animate(withDuration: 0.3, animations: { () -> Void in
             menuVC.view.frame=CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height);
             sender.isEnabled = true
-        }, completion:nil)
+            }, completion:nil)
     }
 }
-
-
