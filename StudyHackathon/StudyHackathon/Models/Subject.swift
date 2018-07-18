@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FirebaseDatabase.FIRDataSnapshot
 
 class Subject {
     
@@ -15,6 +16,15 @@ class Subject {
     
     init(sid: String, subjectName: String) {
         self.sid = sid
+        self.subjectName = subjectName
+    }
+    
+    init?(snapshot: DataSnapshot) {
+        guard let dict = snapshot.value as? [String : Any],
+            let subjectName = dict["subjectName"] as? String
+            else { return nil }
+        
+        self.sid = snapshot.key
         self.subjectName = subjectName
     }
 }

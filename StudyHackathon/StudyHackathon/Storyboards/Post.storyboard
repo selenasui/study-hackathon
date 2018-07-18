@@ -98,7 +98,11 @@
                                 <segue destination="upP-KQ-R1f" kind="unwind" identifier="cancel" unwindAction="unwindWithSegue:" id="4cq-Bj-NnH"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="irK-X6-EdC"/>
+                        <barButtonItem key="rightBarButtonItem" title="Post" style="plain" id="irK-X6-EdC">
+                            <connections>
+                                <segue destination="upP-KQ-R1f" kind="unwind" identifier="post" unwindAction="unwindWithSegue:" id="L04-CV-fCf"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="classTextField" destination="DSI-Id-zp9" id="vEw-Bg-WuI"/>

@@ -22,6 +22,9 @@ class ChannelViewController: UIViewController {
         
         channelNavigationItem.title = subject?.subjectName
         
+        // manually create a new subject
+//        SubjectService.create(subjectName: "")
+        
         self.tableView.reloadData()
     }
     

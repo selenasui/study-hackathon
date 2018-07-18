@@ -11,21 +11,22 @@ import FirebaseDatabase
 
 class SubjectTableViewController: UITableViewController {
     
-//    var subjects = [Subject]() {
-//        didSet {
-//            tableView.reloadData()
-//        }
-//    }
-    
-    var subjects = [Subject(sid: "a", subjectName: "Biology"),
-                    Subject(sid: "b", subjectName: "Chemistry"),
-                    Subject(sid: "c", subjectName: "Physics")]
+    var subjects = [Subject]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // retrieve subjects
-        // notes = CoreDataHelper.retrieveNotes()
+        SubjectService.show { (subjects) in
+            guard let subjectList = subjects else { return }
+            
+            self.subjects = subjectList
+            
+            self.tableView.reloadData()
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

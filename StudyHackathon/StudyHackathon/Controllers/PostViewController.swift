@@ -25,7 +25,7 @@ class PostViewController: UIViewController {
         guard let identifier = segue.identifier else { return }
         
         switch identifier {
-       // case "save":
+       // case "post":
             // save post to database
             
         case "cancel":
