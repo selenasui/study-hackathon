@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Post View Controller-->
+        <!--Create-->
         <scene sceneID="rFd-l0-bfR">
             <objects>
                 <viewController id="USR-8G-kc0" customClass="PostViewController" customModule="StudyHackathon" customModuleProvider="target" sceneMemberID="viewController">
@@ -92,7 +92,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RI3-kP-kD8"/>
                     </view>
-                    <navigationItem key="navigationItem" id="1Ie-S9-YaH">
+                    <navigationItem key="navigationItem" title="Create" id="1Ie-S9-YaH">
                         <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="c38-aT-bU4">
                             <connections>
                                 <segue destination="upP-KQ-R1f" kind="unwind" identifier="cancel" unwindAction="unwindWithSegue:" id="4cq-Bj-NnH"/>
