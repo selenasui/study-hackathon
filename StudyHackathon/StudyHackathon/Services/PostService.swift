@@ -10,12 +10,17 @@ import Foundation
 import FirebaseDatabase
 
 struct PostService {
-    private static func create() {
-        let currentUser = User.current
-        let subject = Subject(sid: "a", subjectName: "Biology")
-        let post = Post()
+    static func create(location: String, course: String, description: String, subject: Subject) {
+        let subject = subject
+        let post = Post(location: location, course: course, description: description)
         
         let rootRef = Database.database().reference()
         let postRef = rootRef.child("subjects").child(subject.sid).child("posts").childByAutoId()
+        let postKey = postRef.key
+        
+        let postDict = post.dictValue
+        let updatedData: [String: Any] = ["subjects/\(subject.sid)/posts/\(postKey)": postDict]
+        
+        rootRef.updateChildValues(updatedData)
     }
 }

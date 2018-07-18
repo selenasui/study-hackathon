@@ -64,6 +64,20 @@ extension ChannelViewController: UITableViewDataSource {
             fatalError("Error: unexpected indexPath")
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else { return }
+        
+        switch identifier {
+        case "displayPost":
+            guard let subject = self.subject else { return }
+            let destination = segue.destination as! PostViewController
+            destination.subject = subject
+            
+        default:
+            print("Unexpected segue identifier")
+        }
+    }
 }
 
 extension ChannelViewController: UITableViewDelegate {

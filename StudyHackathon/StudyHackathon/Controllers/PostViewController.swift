@@ -10,6 +10,8 @@ import UIKit
 
 class PostViewController: UIViewController {
     
+    var subject: Subject?
+    
     @IBOutlet weak var subjectLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var classTextField: UITextField!
@@ -25,11 +27,14 @@ class PostViewController: UIViewController {
         guard let identifier = segue.identifier else { return }
         
         switch identifier {
-       // case "post":
-            // save post to database
+        case "post":
+            guard let subject = subject,
+                let location = locationTextField.text,
+                let course = classTextField.text,
+                let description = descriptionTextView.text
+                else { return }
             
-        case "cancel":
-            print("cancel bar button item pressed")
+            PostService.create(location: location, course: course, description: description, subject: subject)
             
         default:
             print("Unexpected segue identifier")
