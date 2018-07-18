@@ -95,15 +95,10 @@
                     <navigationItem key="navigationItem" id="1Ie-S9-YaH">
                         <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="c38-aT-bU4">
                             <connections>
-                                <action selector="cancelButtonTapped:" destination="USR-8G-kc0" id="JUL-0F-JUy"/>
                                 <segue destination="upP-KQ-R1f" kind="unwind" identifier="cancel" unwindAction="unwindWithSegue:" id="4cq-Bj-NnH"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="irK-X6-EdC">
-                            <connections>
-                                <action selector="doneButtonTapped:" destination="USR-8G-kc0" id="QgM-Fj-zbm"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="irK-X6-EdC"/>
                     </navigationItem>
                     <connections>
                         <outlet property="classTextField" destination="DSI-Id-zp9" id="vEw-Bg-WuI"/>

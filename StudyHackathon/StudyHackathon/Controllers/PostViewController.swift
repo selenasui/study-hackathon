@@ -19,19 +19,21 @@ class PostViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    @IBAction func doneButtonTapped(_ sender: UIBarButtonItem) {
-        
     }
     
-    @IBAction func cancelButtonTapped(_ sender: UIBarButtonItem) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else { return }
+        
+        switch identifier {
+       // case "save":
+            // save post to database
+            
+        case "cancel":
+            print("cancel bar button item pressed")
+            
+        default:
+            print("Unexpected segue identifier")
+        }
     }
     
 }
