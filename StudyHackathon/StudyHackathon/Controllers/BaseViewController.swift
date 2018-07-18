@@ -1,73 +1,32 @@
 //
-//  SubjectTableViewController.swift
-//  StudyHackathon
+//  BaseViewController.swift
+//  AKSwiftSlideMenu
 //
-//  Created by Binjia Chen on 7/17/18.
-//  Copyright © 2018 Make School. All rights reserved.
+//  Created by Ashish on 21/09/15.
+//  Copyright (c) 2015 Kode. All rights reserved.
 //
 
 import UIKit
-import FirebaseDatabase
 
-class SubjectTableViewController: UITableViewController {
-    
-    var subjects = [Subject]() {
-        didSet {
-            tableView.reloadData()
-        }
-    }
+class BaseViewController: UIViewController, SlideMenuDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addSlideMenuButton()
-        
-        SubjectService.show { (subjects) in
-            guard let subjectList = subjects else { return }
-            
-            self.subjects = subjectList
-            
-            self.tableView.reloadData()
-        }
+        // Do any additional setup after loading the view.
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return subjects.count
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "subjectTableViewCell", for: indexPath) as! SubjectTableViewCell
-        
-        let subject = subjects[indexPath.row]
-        cell.subjectNameLabel.text = subject.subjectName
-        
-        return cell
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let identifier = segue.identifier else { return }
-        
-        switch identifier {
-        case "displayChannel":
-            guard let indexPath = tableView.indexPathForSelectedRow else { return }
-            
-            let subject = subjects[indexPath.row]
-            let destination = segue.destination as! ChannelViewController
-            destination.subject = subject
-        
-        default:
-            print("Unexpected segue identifier")
-        }
-    }
-}
-
-extension SubjectTableViewController {
     func slideMenuItemSelectedAtIndex(_ index: Int32) {
         let topViewController : UIViewController = self.navigationController!.topViewController!
         print("View Controller is : \(topViewController) \n", terminator: "")
         switch(index){
         case 0:
             print("Home\n", terminator: "")
-            
+
             self.openViewControllerBasedOnIdentifier("Home")
             
             break
@@ -102,7 +61,7 @@ extension SubjectTableViewController {
         let customBarItem = UIBarButtonItem(customView: btnShowMenu)
         self.navigationItem.leftBarButtonItem = customBarItem;
     }
-    
+
     func defaultMenuImage() -> UIImage {
         var defaultMenuImage = UIImage()
         
@@ -121,7 +80,7 @@ extension SubjectTableViewController {
         defaultMenuImage = UIGraphicsGetImageFromCurrentImageContext()!
         
         UIGraphicsEndImageContext()
-        
+       
         return defaultMenuImage;
     }
     
@@ -141,8 +100,8 @@ extension SubjectTableViewController {
                 viewMenuBack.frame = frameMenu
                 viewMenuBack.layoutIfNeeded()
                 viewMenuBack.backgroundColor = UIColor.clear
-            }, completion: { (finished) -> Void in
-                viewMenuBack.removeFromSuperview()
+                }, completion: { (finished) -> Void in
+                    viewMenuBack.removeFromSuperview()
             })
             
             return
@@ -153,7 +112,7 @@ extension SubjectTableViewController {
         
         let menuVC : MenuViewController = self.storyboard!.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
         menuVC.btnMenu = sender
-        menuVC.delegate = self as? SlideMenuDelegate
+        menuVC.delegate = self
         self.view.addSubview(menuVC.view)
         self.addChildViewController(menuVC)
         menuVC.view.layoutIfNeeded()
@@ -164,7 +123,6 @@ extension SubjectTableViewController {
         UIView.animate(withDuration: 0.3, animations: { () -> Void in
             menuVC.view.frame=CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height);
             sender.isEnabled = true
-        }, completion:nil)
+            }, completion:nil)
     }
 }
-
