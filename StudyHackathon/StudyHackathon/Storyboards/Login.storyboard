@@ -35,7 +35,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="54" id="fxj-jF-qXe"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                         <state key="normal" title="Register or Log In">
                                             <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -43,27 +43,34 @@
                                             <action selector="loginButtonTapped:" destination="H8Z-eS-lzH" eventType="touchUpInside" id="8Kb-OZ-kXY"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find study groups now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCe-gc-5M5">
-                                        <rect key="frame" x="138.5" y="190" width="148.5" height="20"/>
-                                        <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="14"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WeStudy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRI-li-knP">
-                                        <rect key="frame" x="85" y="57" width="255" height="85"/>
+                                        <rect key="frame" x="60" y="57" width="255" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="255" id="Sp5-7y-NcD"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="60"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="shadowColor" red="0.198265095" green="0.68586352949999996" blue="0.84323918819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find study groups now!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCe-gc-5M5">
+                                        <rect key="frame" x="41" y="190" width="293" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="bMY-FS-wOa"/>
+                                            <constraint firstAttribute="width" constant="293" id="bir-tU-PQo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="lRI-li-knP" firstAttribute="leading" secondItem="OOI-zY-bkf" secondAttribute="leading" constant="85" id="6jJ-dP-ci7"/>
                                     <constraint firstItem="qCe-gc-5M5" firstAttribute="top" secondItem="lRI-li-knP" secondAttribute="bottom" constant="48" id="EKI-dz-Ptb"/>
                                     <constraint firstItem="nsg-gW-nTY" firstAttribute="centerX" secondItem="OOI-zY-bkf" secondAttribute="centerX" id="TDz-Y8-l2C"/>
                                     <constraint firstItem="nsg-gW-nTY" firstAttribute="leading" secondItem="OOI-zY-bkf" secondAttribute="leading" constant="41" id="Tfn-Ju-bzS"/>
-                                    <constraint firstItem="lRI-li-knP" firstAttribute="centerX" secondItem="qCe-gc-5M5" secondAttribute="centerX" id="drt-uy-wik"/>
+                                    <constraint firstItem="qCe-gc-5M5" firstAttribute="centerX" secondItem="lRI-li-knP" secondAttribute="centerX" id="Uj2-h6-lPt"/>
+                                    <constraint firstItem="lRI-li-knP" firstAttribute="centerX" secondItem="OOI-zY-bkf" secondAttribute="centerX" id="drt-uy-wik"/>
                                     <constraint firstItem="lRI-li-knP" firstAttribute="top" secondItem="OOI-zY-bkf" secondAttribute="top" constant="57" id="dwc-aW-1Ln"/>
                                     <constraint firstItem="nsg-gW-nTY" firstAttribute="top" secondItem="OOI-zY-bkf" secondAttribute="top" constant="282" id="gp2-My-oY4"/>
                                 </constraints>
