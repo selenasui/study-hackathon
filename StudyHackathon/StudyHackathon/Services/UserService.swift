@@ -50,13 +50,17 @@ struct UserService {
             var posts = [Post]()
             
             for postSnap in snapshot {
+                
+//                let post = Post(snapshot: postSnap)
+//                posts.append(post)
+                
                 dispatchGroup.enter()
                 
                 PostService.show(forKey: postSnap.key, subjectSID: subject.sid) { (post) in
                     if let post = post {
                         posts.append(post)
                     }
-                    
+
                     dispatchGroup.leave()
                 }
             }

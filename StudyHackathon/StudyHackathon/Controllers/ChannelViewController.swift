@@ -24,6 +24,9 @@ class ChannelViewController: UIViewController {
         
         channelNavigationItem.title = subject?.subjectName
         
+        tableView.dataSource = self
+        tableView.delegate = self
+        
         // manually create a new subject
 //        SubjectService.create(subjectName: "")
         
