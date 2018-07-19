@@ -22,7 +22,7 @@ class CreateUsernameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nextButton.layer.cornerRadius = 6
+        nextButton.layer.cornerRadius = 20.0
     }
     
     // MARK: - IBActions
