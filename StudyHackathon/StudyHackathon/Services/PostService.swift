@@ -23,4 +23,16 @@ struct PostService {
         
         rootRef.updateChildValues(updatedData)
     }
+    
+    static func show(forKey postKey: String, subjectSID: String, completion: @escaping (Post?) -> Void) {
+        let ref = Database.database().reference().child("subjects").child(subjectSID).child("posts").child(postKey)
+        
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let post = Post(snapshot: snapshot) else {
+                return completion(nil)
+            }
+            
+            completion(post)
+        })
+    }
 }

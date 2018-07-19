@@ -34,6 +34,7 @@
 		8FB6F3C620FE61D300FD1031 /* SubjectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB6F3C520FE61D300FD1031 /* SubjectTableViewController.swift */; };
 		8FB6F3C820FE654100FD1031 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB6F3C720FE654100FD1031 /* Subject.swift */; };
 		8FB6F3CB20FE67D300FD1031 /* SubjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB6F3CA20FE67D300FD1031 /* SubjectTableViewCell.swift */; };
+		8FD9DF9A2100000C0056F1C5 /* PostDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD9DF992100000C0056F1C5 /* PostDescriptionCell.swift */; };
 		DD8EBACBFFFF34FA053B389E /* Pods_StudyHackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2824D3DDD98570845F3C47F1 /* Pods_StudyHackathon.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		8FB6F3C520FE61D300FD1031 /* SubjectTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectTableViewController.swift; sourceTree = "<group>"; };
 		8FB6F3C720FE654100FD1031 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		8FB6F3CA20FE67D300FD1031 /* SubjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectTableViewCell.swift; sourceTree = "<group>"; };
+		8FD9DF992100000C0056F1C5 /* PostDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDescriptionCell.swift; sourceTree = "<group>"; };
 		95AE4B38D9C2B8FEEDBE2F7E /* Pods-StudyHackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyHackathon.release.xcconfig"; path = "Pods/Target Support Files/Pods-StudyHackathon/Pods-StudyHackathon.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -197,6 +199,7 @@
 				8FB6F3CA20FE67D300FD1031 /* SubjectTableViewCell.swift */,
 				8F42B3DE20FEE18E004D0A79 /* PostHeaderCell.swift */,
 				8F42B3E020FEEC9A004D0A79 /* PostActionCell.swift */,
+				8FD9DF992100000C0056F1C5 /* PostDescriptionCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				758FC76920FFD68200CF7ADA /* MenuViewController.swift in Sources */,
 				8F8E182A20FD491200B61D2F /* UserService.swift in Sources */,
 				8FB6F3C620FE61D300FD1031 /* SubjectTableViewController.swift in Sources */,
+				8FD9DF9A2100000C0056F1C5 /* PostDescriptionCell.swift in Sources */,
 				8F8E182420FD48F300B61D2F /* LoginViewController.swift in Sources */,
 				8F8E182020FD48A900B61D2F /* Constants.swift in Sources */,
 				8F8868D520FFAA7F00E1CF93 /* SubjectService.swift in Sources */,

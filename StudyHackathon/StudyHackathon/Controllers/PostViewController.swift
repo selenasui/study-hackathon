@@ -36,6 +36,9 @@ class PostViewController: UIViewController {
             
             PostService.create(location: location, course: course, description: description, subject: subject)
             
+        case "cancel":
+            print("cancel button tapped")
+            
         default:
             print("Unexpected segue identifier")
         }
