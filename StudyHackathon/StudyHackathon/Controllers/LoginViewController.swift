@@ -18,11 +18,13 @@ class LoginViewController: UIViewController {
     // MARK: - Properties
     
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var transparentView: UIView!
     
     // MARK: - VC Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        transparentView.backgroundColor = UIColor.cyan.withAlphaComponent(0.8)
     }
     
     override func didReceiveMemoryWarning() {
