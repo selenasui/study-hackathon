@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -46,13 +48,44 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostActionCell" rowHeight="46" id="kii-P3-XbV">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostActionCell" rowHeight="46" id="kii-P3-XbV" customClass="PostActionCell" customModule="StudyHackathon" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="126" width="375" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kii-P3-XbV" id="xjC-Ak-Ok3">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="45.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1js-Z3-dOz">
+                                                    <rect key="frame" x="2" y="0.0" width="70" height="45.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="1js-Z3-dOz" secondAttribute="height" multiplier="23:15" id="XaR-rQ-apL"/>
+                                                    </constraints>
+                                                    <state key="normal" image="ic_visibility.png"/>
+                                                    <state key="selected" image="ic_email.png"/>
+                                                    <connections>
+                                                        <action selector="likeButtonTapped:" destination="kii-P3-XbV" eventType="touchUpInside" id="giV-2a-PGe"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ec4-Cl-m1Y">
+                                                    <rect key="frame" x="72" y="11" width="48" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1js-Z3-dOz" firstAttribute="top" secondItem="xjC-Ak-Ok3" secondAttribute="top" id="4kO-tf-yXz"/>
+                                                <constraint firstItem="Ec4-Cl-m1Y" firstAttribute="top" secondItem="xjC-Ak-Ok3" secondAttribute="topMargin" id="6I3-dy-yFt"/>
+                                                <constraint firstItem="1js-Z3-dOz" firstAttribute="leading" secondItem="xjC-Ak-Ok3" secondAttribute="leading" constant="2" id="7MH-Fk-y0y"/>
+                                                <constraint firstAttribute="bottom" secondItem="1js-Z3-dOz" secondAttribute="bottom" id="G5N-Qy-pIn"/>
+                                                <constraint firstItem="Ec4-Cl-m1Y" firstAttribute="leading" secondItem="1js-Z3-dOz" secondAttribute="trailing" id="GFY-G5-Q7S"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Ec4-Cl-m1Y" secondAttribute="bottom" id="f0o-n5-NF2"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="likeButton" destination="1js-Z3-dOz" id="ksI-Rz-NGc"/>
+                                            <outlet property="likeCountLabel" destination="Ec4-Cl-m1Y" id="MG3-jB-9XV"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -80,7 +113,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9vg-KF-YJ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1078" y="-170"/>
+            <point key="canvasLocation" x="1077.5999999999999" y="-170.46476761619192"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_email.png" width="24" height="24"/>
+        <image name="ic_visibility.png" width="24" height="24"/>
+    </resources>
 </document>
