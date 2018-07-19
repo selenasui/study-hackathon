@@ -10,6 +10,7 @@
 		758FC76920FFD68200CF7ADA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758FC76820FFD68200CF7ADA /* MenuViewController.swift */; };
 		758FC76B20FFDA2C00CF7ADA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758FC76A20FFDA2C00CF7ADA /* BaseViewController.swift */; };
 		759E874620FFE37700FF8FDE /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759E874520FFE37700FF8FDE /* MenuTableViewCell.swift */; };
+		28D369FF20FFB86300F19ECA /* LikeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D369FE20FFB86300F19ECA /* LikeService.swift */; };
 		75FA170420FE731600058CDC /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA170320FE731600058CDC /* PostViewController.swift */; };
 		8F42B3DD20FEDF35004D0A79 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F42B3DC20FEDF35004D0A79 /* Post.swift */; };
 		8F42B3DF20FEE18E004D0A79 /* PostHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F42B3DE20FEE18E004D0A79 /* PostHeaderCell.swift */; };
@@ -44,6 +45,7 @@
 		758FC76820FFD68200CF7ADA /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		758FC76A20FFDA2C00CF7ADA /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		759E874520FFE37700FF8FDE /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		28D369FE20FFB86300F19ECA /* LikeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeService.swift; sourceTree = "<group>"; };
 		75FA170320FE731600058CDC /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		8F42B3DC20FEDF35004D0A79 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		8F42B3DE20FEE18E004D0A79 /* PostHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHeaderCell.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				8F8E182920FD491200B61D2F /* UserService.swift */,
 				8F8868D220FFA6E200E1CF93 /* PostService.swift */,
 				8F8868D420FFAA7F00E1CF93 /* SubjectService.swift */,
+				28D369FE20FFB86300F19ECA /* LikeService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 			files = (
 				8F42B3DF20FEE18E004D0A79 /* PostHeaderCell.swift in Sources */,
 				8FB6F3CB20FE67D300FD1031 /* SubjectTableViewCell.swift in Sources */,
+				28D369FF20FFB86300F19ECA /* LikeService.swift in Sources */,
 				75FA170420FE731600058CDC /* PostViewController.swift in Sources */,
 				8F8868D320FFA6E200E1CF93 /* PostService.swift in Sources */,
 				8F8E182220FD48E900B61D2F /* CreateUsernameViewController.swift in Sources */,
