@@ -15,6 +15,9 @@ protocol SlideMenuDelegate {
 class MenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var btnCloseMenuOverlay: UIButton!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var subjects = [Subject]()
     
     var btnMenu : UIButton!
     var delegate : SlideMenuDelegate?
@@ -22,8 +25,13 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-        
+        SubjectService.show { (subjects) in
+            guard let subjectList = subjects else { return }
+            
+            self.subjects = subjectList
+            
+            self.tableView.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,16 +69,22 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return subjects.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell") as! MenuTableViewCell
         
+        let subject = subjects[indexPath.row]
+        cell.menuCellLabel.text = subject.subjectName
+        
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let subject = subjects[indexPath.row]
+        
         let mainStoreboard : UIStoryboard = UIStoryboard(name: "Channel", bundle: nil)
         let DVC = mainStoreboard.instantiateViewController(withIdentifier: "ChannelViewController") as! ChannelViewController
+        DVC.subject = subject
         self.navigationController?.pushViewController(DVC, animated: true)
     }
     

@@ -235,6 +235,9 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <outlet property="menuCellLabel" destination="wzE-PT-Ejo" id="lmI-Pf-zg7"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                         <connections>
@@ -270,6 +273,7 @@
                     </view>
                     <connections>
                         <outlet property="btnCloseMenuOverlay" destination="cCG-I8-lid" id="IcQ-tN-rfr"/>
+                        <outlet property="tableView" destination="i3W-gP-c5n" id="WxA-GZ-9bf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgj-yd-Zzk" userLabel="First Responder" sceneMemberID="firstResponder"/>

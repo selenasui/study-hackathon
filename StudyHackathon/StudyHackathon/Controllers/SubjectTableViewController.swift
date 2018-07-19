@@ -19,7 +19,7 @@ class SubjectTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addSlideMenuButton()
+//        addSlideMenuButton()
         
         SubjectService.show { (subjects) in
             guard let subjectList = subjects else { return }
