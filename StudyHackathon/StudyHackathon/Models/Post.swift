@@ -33,7 +33,7 @@ class Post {
             let location = dict["location"] as? String,
             let course = dict["course"] as? String,
             let description = dict["description"] as? String,
-            let likeCount = dict["likeCount"] as? Int,
+            let likeCount = dict["like_count"] as? Int,
         
             let userDict = dict["poster"] as? [String: Any],
             let uid = userDict["uid"] as? String,

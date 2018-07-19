@@ -51,20 +51,14 @@ struct UserService {
             
             for postSnap in snapshot {
                 
-//                let post = Post(snapshot: postSnap)
-//                posts.append(post)
-                
                 dispatchGroup.enter()
                 
-                PostService.show(forKey: postSnap.key, subjectSID: subject.sid) { (post) in
-                    if let post = post {
-                        posts.append(post)
-                    }
-
-                    dispatchGroup.leave()
-                }
+                guard let post = Post(snapshot: postSnap) else { return }
+                posts.append(post)
+                
+                dispatchGroup.leave()
             }
-            
+
             dispatchGroup.notify(queue: .main, execute: {
                 completion(posts.reversed())
             })
