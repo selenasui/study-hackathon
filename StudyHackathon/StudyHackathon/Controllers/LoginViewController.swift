@@ -24,7 +24,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        transparentView.backgroundColor = UIColor.cyan.withAlphaComponent(0.8)
+        transparentView.backgroundColor = UIColor.cyan.withAlphaComponent(0.7)
+        loginButton.layer.cornerRadius = 20.0
     }
     
     override func didReceiveMemoryWarning() {
