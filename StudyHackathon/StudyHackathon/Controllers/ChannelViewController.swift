@@ -25,11 +25,20 @@ class ChannelViewController: UIViewController {
         // manually create a new subject
 //        SubjectService.create(subjectName: "")
         
-        self.tableView.reloadData()
+        reloadTimeline()
+    }
+    
+    @objc func reloadTimeline() {
+        guard let subject = subject else { return }
+        UserService.timeline(subject: subject) { (posts) in
+            self.posts = posts
+            
+            self.tableView.reloadData()
+        }
     }
     
     @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
-        // notes = CoreDataHelper.retrieveSubjects()
+        reloadTimeline()
     }
     
 }
@@ -45,15 +54,18 @@ extension ChannelViewController: UITableViewDataSource {
         switch indexPath.row {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "PostHeaderCell") as! PostHeaderCell
-            //cell.usernameLabel.text = post.poster.username
+            cell.usernameLabel.text = post.poster.username
 
             return cell
 
-//        case 1:
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "postImageCell") as! PostImageCell
-//
-//            return cell
-//
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PostDescriptionCell") as! PostDescriptionCell
+            cell.locationLabel.text = post.location
+            cell.courseLabel.text = post.course
+            cell.descriptionLabel.text = post.description
+
+            return cell
+
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "PostActionCell") as! PostActionCell
             // configure cell
@@ -65,6 +77,10 @@ extension ChannelViewController: UITableViewDataSource {
         }
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return posts.count
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier else { return }
         
@@ -73,7 +89,7 @@ extension ChannelViewController: UITableViewDataSource {
             guard let subject = self.subject else { return }
             let destination = segue.destination as! PostViewController
             destination.subject = subject
-            
+        
         default:
             print("Unexpected segue identifier")
         }
@@ -86,8 +102,8 @@ extension ChannelViewController: UITableViewDelegate {
         case 0:
             return PostHeaderCell.height
             
-        //case 1:
-            // code for height of post description box
+        case 1:
+            return PostDescriptionCell.height
             
         case 2:
             return PostActionCell.height

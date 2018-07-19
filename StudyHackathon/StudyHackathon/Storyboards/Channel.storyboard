@@ -30,24 +30,83 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostHeaderCell" rowHeight="54" id="pEB-Ah-rAt">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostHeaderCell" rowHeight="54" id="pEB-Ah-rAt" customClass="PostHeaderCell" customModule="StudyHackathon" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pEB-Ah-rAt" id="nbC-oa-2N2">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="53.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKI-qV-aLX">
+                                                    <rect key="frame" x="22" y="0.0" width="331" height="53.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="hKI-qV-aLX" firstAttribute="leading" secondItem="nbC-oa-2N2" secondAttribute="leading" constant="22" id="aBp-Hq-Qb2"/>
+                                                <constraint firstAttribute="trailing" secondItem="hKI-qV-aLX" secondAttribute="trailing" constant="22" id="c7X-wa-gVt"/>
+                                                <constraint firstAttribute="bottom" secondItem="hKI-qV-aLX" secondAttribute="bottom" id="eIm-kW-R7B"/>
+                                                <constraint firstItem="hKI-qV-aLX" firstAttribute="top" secondItem="nbC-oa-2N2" secondAttribute="top" id="hE8-HU-3DI"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="usernameLabel" destination="hKI-qV-aLX" id="LVU-cj-f4M"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="D2U-bp-a9P">
-                                        <rect key="frame" x="0.0" y="82" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" tag="1" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostDescriptionCell" rowHeight="200" id="D2U-bp-a9P" customClass="PostDescriptionCell" customModule="StudyHackathon" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="82" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D2U-bp-a9P" id="eun-dh-Ncm">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tE5-H5-aaC">
+                                                    <rect key="frame" x="22" y="0.0" width="331" height="199.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdg-dC-MoX">
+                                                            <rect key="frame" x="0.0" y="0.0" width="331" height="37.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEs-Aq-Y7l">
+                                                            <rect key="frame" x="0.0" y="37.5" width="331" height="37"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydc-v4-GFE">
+                                                            <rect key="frame" x="0.0" y="74.5" width="331" height="125"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="125" id="64C-C2-9hc"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="sEs-Aq-Y7l" firstAttribute="height" secondItem="gdg-dC-MoX" secondAttribute="height" id="coI-7k-ZYO"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="tE5-H5-aaC" secondAttribute="bottom" id="BEa-Gx-C3m"/>
+                                                <constraint firstItem="tE5-H5-aaC" firstAttribute="top" secondItem="eun-dh-Ncm" secondAttribute="top" id="LFE-ZS-KZn"/>
+                                                <constraint firstItem="tE5-H5-aaC" firstAttribute="leading" secondItem="eun-dh-Ncm" secondAttribute="leading" constant="22" id="f6f-Sg-Y6Z"/>
+                                                <constraint firstAttribute="trailing" secondItem="tE5-H5-aaC" secondAttribute="trailing" constant="22" id="vFX-Rg-QNf"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="courseLabel" destination="sEs-Aq-Y7l" id="1A4-2m-9AP"/>
+                                            <outlet property="descriptionLabel" destination="ydc-v4-GFE" id="yjo-9C-d2F"/>
+                                            <outlet property="locationLabel" destination="gdg-dC-MoX" id="IZl-Ax-yut"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostActionCell" rowHeight="46" id="kii-P3-XbV">
-                                        <rect key="frame" x="0.0" y="126" width="375" height="46"/>
+                                    <tableViewCell clipsSubviews="YES" tag="2" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostActionCell" rowHeight="46" id="kii-P3-XbV" customClass="PostActionCell" customModule="StudyHackathon" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="282" width="375" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kii-P3-XbV" id="xjC-Ak-Ok3">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="45.5"/>
@@ -55,6 +114,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="enh-BD-VJz" id="R5P-Z2-67z"/>
+                                    <outlet property="delegate" destination="enh-BD-VJz" id="Qx0-7J-0G1"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
