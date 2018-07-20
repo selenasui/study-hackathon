@@ -71,6 +71,8 @@ extension ChannelViewController: UITableViewDataSource {
             if post.description == " " {
                 return cell
             }
+            
+            
             cell.descriptionLabel.text = post.description
 
             return cell
@@ -107,7 +109,7 @@ extension ChannelViewController: UITableViewDataSource {
         
     func configureCell(_ cell: PostActionCell, with post: Post) {
         cell.likeButton.isSelected = post.isLiked
-        cell.likeCountLabel.text = "\(post.likeCount) likes"
+        cell.likeCountLabel.text = "\(post.likeCount) attending"
     }
 }
     
@@ -170,6 +172,7 @@ extension ChannelViewController {
         btnShowMenu.addTarget(self, action: #selector(BaseViewController.onSlideMenuButtonPressed(_:)), for: UIControlEvents.touchUpInside)
         let customBarItem = UIBarButtonItem(customView: btnShowMenu)
         self.navigationItem.leftBarButtonItem = customBarItem;
+        
     }
     
     func defaultMenuImage() -> UIImage {
