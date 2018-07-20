@@ -40,6 +40,9 @@ class PostViewController: UIViewController {
         super.viewDidLoad()
         
         self.subjectLabel.text = subject?.subjectName
+        
+        let user = User.current
+        self.usernameLabel.text = user.username
 
         self.descriptionTextView.layer.borderWidth = 2
 //        self.descriptionTextView.clipsToBounds = true
