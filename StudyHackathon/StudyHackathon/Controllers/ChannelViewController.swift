@@ -67,6 +67,10 @@ extension ChannelViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PostDescriptionCell") as! PostDescriptionCell
             cell.locationLabel.text = post.location
             cell.courseLabel.text = post.course
+            //guard let post.description = self.post.description else { return }
+            if post.description == " " {
+                return cell
+            }
             cell.descriptionLabel.text = post.description
 
             return cell
