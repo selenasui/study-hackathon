@@ -10,9 +10,9 @@ import Foundation
 import FirebaseDatabase
 
 struct PostService {
-    static func create(location: String, course: String, description: String, subject: Subject) {
+    static func create(location: String, course: String, description: String, subject: Subject, startDate: Date, endDate: Date) {
         let subject = subject
-        let post = Post(location: location, course: course, description: description)
+        let post = Post(location: location, course: course, description: description, startDate: startDate, endDate: endDate)
         
         let rootRef = Database.database().reference()
         let postRef = rootRef.child("subjects").child(subject.sid).child("posts").childByAutoId()

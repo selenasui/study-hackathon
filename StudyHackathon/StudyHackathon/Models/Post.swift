@@ -18,14 +18,18 @@ class Post {
     let description: String
     let poster: User
     var likeCount: Int
+    let startDate: Date
+    let endDate: Date
     
-    init(location: String, course: String, description: String) {
+    init(location: String, course: String, description: String, startDate: Date, endDate: Date) {
         self.location = location
         self.course = course
         self.description = description
         
         self.poster = User.current
         self.likeCount = 0
+        self.startDate = startDate
+        self.endDate = endDate
     }
     
     init?(snapshot: DataSnapshot) {
@@ -34,6 +38,8 @@ class Post {
             let course = dict["course"] as? String,
             let description = dict["description"] as? String,
             let likeCount = dict["like_count"] as? Int,
+            let startDate = dict["startDate"] as? Date,
+            let endDate = dict["endDate"] as? Date,
         
             let userDict = dict["poster"] as? [String: Any],
             let uid = userDict["uid"] as? String,
@@ -44,6 +50,8 @@ class Post {
         self.location = location
         self.course = course
         self.description = description
+        self.startDate = startDate
+        self.endDate = endDate
         self.likeCount = likeCount
         
         self.poster = User(uid: uid, username: username)
@@ -55,6 +63,8 @@ class Post {
         
         return ["location" : location,
                 "course" : course,
+                "startDate" : startDate,
+                "endDate" : endDate,
                 "description" : description,
                 "poster" : userDict,
                 "like_count" : likeCount]

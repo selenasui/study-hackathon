@@ -27,14 +27,14 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subject" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6C-0m-orc">
                                                 <rect key="frame" x="0.0" y="0.0" width="345" height="42.5"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="0.81910851883561642" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqs-Bv-h81">
                                                 <rect key="frame" x="0.0" y="42.5" width="345" height="44"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="textColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="0.55883454623287676" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -65,7 +65,7 @@
                                                     <!--2018-07-20 18:34:34 +0000-->
                                                 </date>
                                                 <connections>
-                                                    <action selector="clickstartTime:" destination="USR-8G-kc0" eventType="touchDragOutside" id="WMW-L1-1ee"/>
+                                                    <action selector="chooseStartTime:" destination="USR-8G-kc0" eventType="valueChanged" id="JOQ-0i-j3x"/>
                                                 </connections>
                                             </datePicker>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zzx-m2-EKs">
@@ -88,6 +88,9 @@
                                                 <date key="date" timeIntervalSinceReferenceDate="553804580.99424303">
                                                     <!--2018-07-20 18:36:20 +0000-->
                                                 </date>
+                                                <connections>
+                                                    <action selector="chooseEndTime:" destination="USR-8G-kc0" eventType="valueChanged" id="FHj-0D-ZbH"/>
+                                                </connections>
                                             </datePicker>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -119,8 +122,8 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Meet Up Details:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HmM-Km-9UQ">
                                                 <rect key="frame" x="10" y="8" width="141" height="25"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="textColor" white="0.90000000000000002" alpha="0.99183968321917804" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -141,7 +144,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.46274509803921571" green="0.83921568627450982" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.46274509803921571" green="0.83921568627450982" blue="1" alpha="0.55883454623287676" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qdz-0a-nmi" firstAttribute="top" secondItem="RI3-kP-kD8" secondAttribute="top" constant="24" id="C9M-lg-MRW"/>
                             <constraint firstAttribute="trailing" secondItem="qdz-0a-nmi" secondAttribute="trailing" constant="15" id="WSq-qL-Neg"/>
@@ -165,9 +168,11 @@
                     <connections>
                         <outlet property="classTextField" destination="DSI-Id-zp9" id="vEw-Bg-WuI"/>
                         <outlet property="descriptionTextView" destination="PtK-W8-DzR" id="fwa-12-fKh"/>
+                        <outlet property="endTimePicker" destination="ZgH-Ir-vLY" id="1Wg-oI-tZM"/>
                         <outlet property="startTimePicker" destination="LaP-Fx-un7" id="kyv-Fl-Aqx"/>
                         <outlet property="studyLocTextField" destination="cIL-ZC-uaS" id="mmb-aM-0s1"/>
                         <outlet property="subjectLabel" destination="X6C-0m-orc" id="J8Q-F5-uFr"/>
+                        <outlet property="timeView" destination="tOD-Yk-1uu" id="A8R-hZ-VvZ"/>
                         <outlet property="usernameLabel" destination="rqs-Bv-h81" id="9rv-os-cen"/>
                     </connections>
                 </viewController>
