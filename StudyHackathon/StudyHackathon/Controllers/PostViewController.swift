@@ -26,15 +26,18 @@ class PostViewController: UIViewController {
     @IBOutlet weak var classTextField: UITextField!
     @IBOutlet weak var studyLocTextField: UITextField!
     @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var timeView: UIView!
     @IBOutlet weak var startTimeTextField: UITextField!
     @IBOutlet weak var endTimeTextField: UITextField!
     
     var locationPicker: UIPickerView?
     var classPicker: UIPickerView?
     
+    @IBOutlet weak var endTimePicker: UIDatePicker!
+    @IBAction func chooseEndTime(_ sender: UIDatePicker) {
+    }
     @IBOutlet weak var startTimePicker: UIDatePicker!
-    @IBAction func clickstartTime(_ sender: UIDatePicker) {
-         startTimeTextField.text = "\(sender.date)"
+    @IBAction func chooseStartTime(_ sender: UIDatePicker) {
     }
     
     override func viewDidLoad() {
@@ -64,6 +67,9 @@ class PostViewController: UIViewController {
         
         locationPicker = createLocPicker()
         classPicker = createClassPicker()
+        
+        descriptionTextView.layer.cornerRadius = 15
+        timeView.layer.cornerRadius = 5
     }
     
     let bioClasses = ["Bio 1A", "Bio 1B"]
@@ -132,11 +138,9 @@ class PostViewController: UIViewController {
                 let location = studyLocTextField.text,
                 let course = classTextField.text,
                 let description = descriptionTextView.text
-                //let startTime = startTimeTextField.text,
-                //let endTime = endTimeTextField.text
                 else { return }
             
-            PostService.create(location: location, course: course, description: description, subject: subject)
+            PostService.create(location: location, course: course, description: description, subject: subject, startDate: startTimePicker.date, endDate: endTimePicker.date)
             
         case "cancel":
             print("cancel button tapped")

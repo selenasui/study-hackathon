@@ -41,7 +41,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKI-qV-aLX">
-                                                    <rect key="frame" x="22" y="0.0" width="331" height="54"/>
+                                                    <rect key="frame" x="22" y="0.0" width="103" height="54"/>
                                                     <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="17"/>
                                                     <color key="textColor" red="0.039215686274509803" green="0.039215686274509803" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -50,7 +50,7 @@
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="hKI-qV-aLX" firstAttribute="leading" secondItem="nbC-oa-2N2" secondAttribute="leading" constant="22" id="aBp-Hq-Qb2"/>
-                                                <constraint firstAttribute="trailing" secondItem="hKI-qV-aLX" secondAttribute="trailing" constant="22" id="c7X-wa-gVt"/>
+                                                <constraint firstAttribute="trailing" secondItem="hKI-qV-aLX" secondAttribute="trailing" constant="250" id="c7X-wa-gVt"/>
                                                 <constraint firstAttribute="bottom" secondItem="hKI-qV-aLX" secondAttribute="bottom" id="eIm-kW-R7B"/>
                                                 <constraint firstItem="hKI-qV-aLX" firstAttribute="top" secondItem="nbC-oa-2N2" secondAttribute="top" id="hE8-HU-3DI"/>
                                             </constraints>
@@ -105,6 +105,27 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNF-ox-XjJ">
+                                                    <rect key="frame" x="23" y="158" width="36" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxL-It-nNH">
+                                                    <rect key="frame" x="73" y="158" width="26" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v83-PE-nax">
+                                                    <rect key="frame" x="89" y="158" width="30" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
@@ -119,7 +140,9 @@
                                         <connections>
                                             <outlet property="courseLabel" destination="sEs-Aq-Y7l" id="1A4-2m-9AP"/>
                                             <outlet property="descriptionLabel" destination="ydc-v4-GFE" id="yjo-9C-d2F"/>
+                                            <outlet property="endDateLabel" destination="v83-PE-nax" id="rI8-y6-Ger"/>
                                             <outlet property="locationLabel" destination="gdg-dC-MoX" id="IZl-Ax-yut"/>
+                                            <outlet property="startDateLabel" destination="wNF-ox-XjJ" id="qCx-6w-Cnb"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" tag="2" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostActionCell" rowHeight="52" id="kii-P3-XbV" customClass="PostActionCell" customModule="StudyHackathon" customModuleProvider="target">
