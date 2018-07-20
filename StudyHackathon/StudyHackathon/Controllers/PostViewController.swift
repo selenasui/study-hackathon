@@ -8,7 +8,6 @@
 
 //get Date picker to fit and show correct time format
 //need to add UIOutlet for End Time and make black border
-//need to get Loc Picker "Done" button working
 //add second picker
 //add pictures
 
@@ -26,15 +25,17 @@ class PostViewController: UIViewController {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var classTextField: UITextField!
     @IBOutlet weak var studyLocTextField: UITextField!
-    @IBOutlet weak var dateTimeTextField: UITextField!
     @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var startTimeTextField: UITextField!
     @IBOutlet weak var endTimeTextField: UITextField!
     
-    //@IBOutlet weak var datePicker: UIDatePicker!
+    var locationPicker: UIPickerView?
+    var classPicker: UIPickerView?
     
-    //@IBAction func setStartDate(_ sender: UIDatePicker) {
-        //dateTimeTextField.text = "\(sender.date)"
-    //}
+    @IBOutlet weak var startTimePicker: UIDatePicker!
+    @IBAction func clickstartTime(_ sender: UIDatePicker) {
+         startTimeTextField.text = "\(sender.date)"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,16 +57,10 @@ class PostViewController: UIViewController {
         self.studyLocTextField.layer.cornerRadius = 5
         self.studyLocTextField.layer.borderColor = UIColor.gray.cgColor
         
-        self.dateTimeTextField.layer.borderWidth = 1
-        self.dateTimeTextField.layer.cornerRadius = 5
-        self.dateTimeTextField.layer.borderColor = UIColor.gray.cgColor
-        
-        //self.endTimeTextField.layer.borderWidth = 1
-        //self.endTimeTextField.layer.borderColor = UIColor.gray.cgColor
-        
         //self.usernameLabel.text = post.poster.username
         
-        createLocPicker()
+        locationPicker = createLocPicker()
+        classPicker = createClassPicker()
     }
     
     let bioClasses = ["Bio 1A", "Bio 1B"]
@@ -78,41 +73,45 @@ class PostViewController: UIViewController {
     var selectedLoc: String?
     var selectedClass: String?
     
-    func createLocPicker() {
+    func createLocPicker() -> UIPickerView {
         
-        let pickerView = UIPickerView()
-        pickerView.delegate = self
-        pickerView.tag = 1
+        let locPicker = UIPickerView()
+        locPicker.delegate = self
         
-        studyLocTextField.inputView = pickerView
-        
+        studyLocTextField.inputView = locPicker
+        createToolbar(textField: studyLocTextField)
         //Customizations
         //LocPicker.backgroundColor = .white
+        return locPicker
     }
     
-    func createClassPicker() {
+    func createClassPicker() -> UIPickerView {
         
-        let pickerView = UIPickerView()
-        pickerView.delegate = self
-        pickerView.tag = 2
+        let classPicker = UIPickerView()
+        classPicker.delegate = self
         
-        classTextField.inputView = pickerView
+        classTextField.inputView = classPicker
+        createToolbar(textField: classTextField)
+        return classPicker
     }
     
-    func createToolbar() {
+    func createToolbar(textField: UITextField) {
         
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
-        
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self,
+        toolBar.backgroundColor = UIColor.blue
+        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self,
             action: #selector(PostViewController.dismissKeyboard))
             
         //doneButton.frame = CGRectMake(0, 0, 30, 30)
         
         toolBar.setItems([doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true
-        
-        studyLocTextField.inputAccessoryView = toolBar
+        let leadingFlex = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let trailingFlex = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        toolBar.items = [leadingFlex, doneButton, trailingFlex]
+        textField.inputAccessoryView = toolBar
+
     }
     
     @objc func dismissKeyboard() {
@@ -130,7 +129,7 @@ class PostViewController: UIViewController {
                 let location = studyLocTextField.text,
                 let course = classTextField.text,
                 let description = descriptionTextView.text
-                //let startTime = dateTimeTextField.text,
+                //let startTime = startTimeTextField.text,
                 //let endTime = endTimeTextField.text
                 else { return }
             
@@ -152,35 +151,28 @@ extension PostViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        /*if (pickerView.tag == 1){
+        if (pickView == locationPicker){
             return location.count
         }else{
             return classes.count
         }
-        */
-        return location.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        /*if (pickerView.tag == 1){
+        if (pickerView == locationPicker){
             return location[row]
         }else{
             return classes[row]
         }
-        */
-        return location[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        /*if (pickerView.tag == 1){
+        if (pickerView == locationPicker){
             selectedLoc = location[row]
             studyLocTextField.text = selectedLoc
         }else{
             selectedClass = classes[row]
             classTextField.text = selectedClass
         }
-        */
-        selectedLoc = location[row]
-        studyLocTextField.text = selectedLoc
     }
 }
