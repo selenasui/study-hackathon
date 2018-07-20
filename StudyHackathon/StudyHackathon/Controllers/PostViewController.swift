@@ -38,6 +38,9 @@ class PostViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.subjectLabel.text = subject?.subjectName
+
         self.descriptionTextView.layer.borderWidth = 2
 //        self.descriptionTextView.clipsToBounds = true
 //        self.descriptionTextView.layer.shadowRadius = 15
@@ -114,6 +117,8 @@ class PostViewController: UIViewController {
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
+
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
