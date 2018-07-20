@@ -68,7 +68,7 @@ extension ChannelViewController: UITableViewDataSource {
             cell.locationLabel.text = post.location
             cell.courseLabel.text = post.course
             //guard let post.description = self.post.description else { return }
-            if post.description == "" {
+            if post.description == " " {
                 return cell
             }
             cell.descriptionLabel.text = post.description

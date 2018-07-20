@@ -9,6 +9,9 @@
 //get Date picker to fit and show correct time format
 //need to add UIOutlet for End Time and make black border
 //need to get Loc Picker "Done" button working
+//add second picker
+//add pictures
+
     //Emily: add Color to nav bar and background
     //Selena: make "subject" and "username" specific
 
@@ -65,19 +68,32 @@ class PostViewController: UIViewController {
     let bioClasses = ["Bio 1A", "Bio 1B"]
     let chemClasses = ["Chem 1A", "Chem 1B", "Chem 3A", "Chem 3B", "Chem 4A", "Chem 4B"]
     let physicsClasses = ["Physics 8A", "Physics 8B", "Physics 7A", "Physics 7B"]
+    
     let location = ["Moffit", "Doe", "VLSB", "Bancroft", "Haas", "Hildebrand",]
+    let classes = ["Bio 1A", "Bio 1B", "Chem 1A", "Chem 1B", "Chem 3A", "Chem 3B", "Chem 4A", "Chem 4B", "Physics 8A", "Physics 8B", "Physics 7A", "Physics 7B"]
     
     var selectedLoc: String?
+    var selectedClass: String?
     
     func createLocPicker() {
         
-        let LocPicker = UIPickerView()
-        LocPicker.delegate = self
+        let pickerView = UIPickerView()
+        pickerView.delegate = self
+        pickerView.tag = 1
         
-        studyLocTextField.inputView = LocPicker
+        studyLocTextField.inputView = pickerView
         
         //Customizations
         //LocPicker.backgroundColor = .white
+    }
+    
+    func createClassPicker() {
+        
+        let pickerView = UIPickerView()
+        pickerView.delegate = self
+        pickerView.tag = 2
+        
+        classTextField.inputView = pickerView
     }
     
     func createToolbar() {
@@ -88,6 +104,8 @@ class PostViewController: UIViewController {
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self,
             action: #selector(PostViewController.dismissKeyboard))
             
+        //doneButton.frame = CGRectMake(0, 0, 30, 30)
+        
         toolBar.setItems([doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true
         
@@ -129,16 +147,34 @@ extension PostViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        /*if (pickerView.tag == 1){
+            return location.count
+        }else{
+            return classes.count
+        }
+        */
         return location.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        /*if (pickerView.tag == 1){
+            return location[row]
+        }else{
+            return classes[row]
+        }
+        */
         return location[row]
-        
-        
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        /*if (pickerView.tag == 1){
+            selectedLoc = location[row]
+            studyLocTextField.text = selectedLoc
+        }else{
+            selectedClass = classes[row]
+            classTextField.text = selectedClass
+        }
+        */
         selectedLoc = location[row]
         studyLocTextField.text = selectedLoc
     }
