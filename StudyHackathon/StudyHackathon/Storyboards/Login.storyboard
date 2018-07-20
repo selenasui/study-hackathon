@@ -113,25 +113,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="hhS-cC-V01">
-                                        <rect key="frame" x="15" y="50" width="345" height="187"/>
+                                        <rect key="frame" x="15" y="50" width="345" height="217"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMN-5H-EGe">
-                                                <rect key="frame" x="56.5" y="0.0" width="232.5" height="19"/>
+                                                <rect key="frame" x="56.5" y="0.0" width="232.5" height="39"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                                 <color key="textColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a username so your friends can find you later." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hu5-4m-xly">
-                                                <rect key="frame" x="24.5" y="37" width="296.5" height="20"/>
+                                                <rect key="frame" x="15" y="57" width="315" height="40"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="fTg-Z0-aNd"/>
+                                                    <constraint firstAttribute="height" constant="40" id="fTg-Z0-aNd"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9jz-Xj-y81">
-                                                <rect key="frame" x="0.0" y="75" width="345" height="44"/>
+                                                <rect key="frame" x="0.0" y="115" width="345" height="44"/>
                                                 <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="jGx-Qn-EWh"/>
@@ -141,10 +141,10 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Npl-YP-kFt">
-                                                <rect key="frame" x="60" y="137" width="225" height="50"/>
+                                                <rect key="frame" x="60" y="177" width="225" height="40"/>
                                                 <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="gXz-no-xAK"/>
+                                                    <constraint firstAttribute="height" constant="40" id="gXz-no-xAK"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                 <state key="normal" title="Next">
@@ -156,8 +156,10 @@
                                             </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Hu5-4m-xly" secondAttribute="trailing" constant="15" id="7fw-7x-HnV"/>
                                             <constraint firstAttribute="trailing" secondItem="Npl-YP-kFt" secondAttribute="trailing" constant="60" id="8cf-Gh-yes"/>
                                             <constraint firstItem="Npl-YP-kFt" firstAttribute="leading" secondItem="hhS-cC-V01" secondAttribute="leading" constant="60" id="B5d-r2-C2Q"/>
+                                            <constraint firstItem="Hu5-4m-xly" firstAttribute="leading" secondItem="hhS-cC-V01" secondAttribute="leading" constant="15" id="OmO-NN-ff6"/>
                                             <constraint firstAttribute="trailing" secondItem="9jz-Xj-y81" secondAttribute="trailing" id="blN-qd-XtI"/>
                                             <constraint firstItem="9jz-Xj-y81" firstAttribute="leading" secondItem="hhS-cC-V01" secondAttribute="leading" id="s6R-PY-l3z"/>
                                         </constraints>
@@ -166,7 +168,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="hhS-cC-V01" firstAttribute="top" secondItem="mXj-tT-2Mo" secondAttribute="top" constant="50" id="CK4-Rm-F0V"/>
-                                    <constraint firstAttribute="bottom" secondItem="hhS-cC-V01" secondAttribute="bottom" constant="430" id="Wor-HL-L3R"/>
+                                    <constraint firstAttribute="bottom" secondItem="hhS-cC-V01" secondAttribute="bottom" constant="400" id="Wor-HL-L3R"/>
                                     <constraint firstAttribute="trailing" secondItem="hhS-cC-V01" secondAttribute="trailing" constant="15" id="l8h-BA-zq9"/>
                                     <constraint firstItem="hhS-cC-V01" firstAttribute="leading" secondItem="mXj-tT-2Mo" secondAttribute="leading" constant="15" id="uBP-UB-I3a"/>
                                 </constraints>
