@@ -21,6 +21,8 @@ class PostViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.subjectLabel.text = subject?.subjectName
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
