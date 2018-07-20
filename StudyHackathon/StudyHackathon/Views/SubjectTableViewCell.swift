@@ -10,6 +10,8 @@ import UIKit
 
 class SubjectTableViewCell: UITableViewCell {
     
+    static let height: CGFloat = 65
+    
     @IBOutlet weak var subjectNameLabel: UILabel!
     
 }

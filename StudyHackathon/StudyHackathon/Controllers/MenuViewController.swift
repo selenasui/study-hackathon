@@ -64,7 +64,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBAction func btnHomeTapped(_ sender: Any) {
         let mainStoreboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let DVC = mainStoreboard.instantiateViewController(withIdentifier: "SubjectTableViewController") as! SubjectTableViewController
+        let DVC = mainStoreboard.instantiateViewController(withIdentifier: "SubjectViewController") as! SubjectTableViewController
         self.navigationController?.pushViewController(DVC, animated: true)
     }
     
