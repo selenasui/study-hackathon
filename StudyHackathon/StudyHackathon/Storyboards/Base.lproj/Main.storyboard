@@ -33,6 +33,10 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dds-hA-Wf1" secondAttribute="height" multiplier="1:1" id="q2B-5i-eXK"/>
                                 </constraints>
+                                <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1-1232184927DJef" id="uT4-9h-lyU">
+                                    <rect key="frame" x="0.0" y="72" width="375" height="257"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="subjectTableViewCell" id="KhY-Jz-ak1" customClass="SubjectTableViewCell" customModule="StudyHackathon" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -71,7 +75,7 @@
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subjects" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bai-uo-gGs">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="292"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="78"/>
+                                <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="74"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -95,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DR9-El-Ics" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-158" y="-170"/>
+            <point key="canvasLocation" x="-159.19999999999999" y="-170.46476761619192"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tas-lV-8jp">
@@ -121,4 +125,7 @@
             <point key="canvasLocation" x="-961" y="-170"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1-1232184927DJef" width="1280" height="853"/>
+    </resources>
 </document>
