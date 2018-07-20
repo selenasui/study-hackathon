@@ -17,12 +17,19 @@ class SubjectTableViewController: UITableViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.hidesBackButton = true
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        addSlideMenuButton()
         
         SubjectService.show { (subjects) in
             guard let subjectList = subjects else { return }
+            
+            self.viewWillAppear(false)
             
             self.subjects = subjectList
             
