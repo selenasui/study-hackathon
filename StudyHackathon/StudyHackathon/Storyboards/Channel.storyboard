@@ -122,7 +122,7 @@
                                             <outlet property="locationLabel" destination="gdg-dC-MoX" id="IZl-Ax-yut"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostActionCell" rowHeight="52" id="kii-P3-XbV" customClass="PostActionCell" customModule="StudyHackathon" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" tag="2" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostActionCell" rowHeight="52" id="kii-P3-XbV" customClass="PostActionCell" customModule="StudyHackathon" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="282" width="375" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kii-P3-XbV" id="xjC-Ak-Ok3">
