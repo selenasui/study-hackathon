@@ -99,7 +99,7 @@
                                         <rect key="frame" x="0.0" y="282" width="345" height="340.5"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PtK-W8-DzR">
-                                                <rect key="frame" x="10" y="50" width="325" height="280.5"/>
+                                                <rect key="frame" x="0.0" y="50" width="345" height="266.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -126,9 +126,9 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="PtK-W8-DzR" firstAttribute="top" secondItem="SsZ-Js-I3s" secondAttribute="top" constant="50" id="UFb-ak-uFm"/>
-                                            <constraint firstAttribute="bottom" secondItem="PtK-W8-DzR" secondAttribute="bottom" constant="10" id="YeL-EE-DM0"/>
-                                            <constraint firstItem="PtK-W8-DzR" firstAttribute="leading" secondItem="SsZ-Js-I3s" secondAttribute="leading" constant="10" id="ibn-zN-tTl"/>
-                                            <constraint firstAttribute="trailing" secondItem="PtK-W8-DzR" secondAttribute="trailing" constant="10" id="oZz-Tk-Xyu"/>
+                                            <constraint firstAttribute="bottom" secondItem="PtK-W8-DzR" secondAttribute="bottom" constant="24" id="YeL-EE-DM0"/>
+                                            <constraint firstItem="PtK-W8-DzR" firstAttribute="leading" secondItem="SsZ-Js-I3s" secondAttribute="leading" id="ibn-zN-tTl"/>
+                                            <constraint firstAttribute="trailing" secondItem="PtK-W8-DzR" secondAttribute="trailing" id="oZz-Tk-Xyu"/>
                                         </constraints>
                                     </view>
                                 </subviews>
